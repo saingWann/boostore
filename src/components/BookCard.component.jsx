@@ -1,18 +1,12 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { API_URL } from "../lib/constant";
 
 const BookCardComponent = ({ bookData }) => {
   const nav = useNavigate();
   const location = useLocation();
-
   console.log(location.pathname);
   const handleCLick = () => {
-    if (location.pathname === `/store`) {
-      nav(`${bookData.id}`);
-    } else {
-      nav(`store/${bookData.id}`);
-    }
+    nav(`detail/${bookData.id}`);
   };
 
   return (
@@ -27,9 +21,10 @@ const BookCardComponent = ({ bookData }) => {
           <p className="font-bold">{bookData.book}</p>
           <p className="text-xs">{bookData.author}</p>
         </span>
-        <span className="w-full px-5 pt-5 pb-20 flex flex-col gap-3 items-start absolute bg-white -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
+
+        <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-white -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
           <p className="font-bold">{bookData.book}</p>
-          <p className="text-xs">{bookData.author}</p>
+          <p className="text-xs mb-5">{bookData.author}</p>
           <button
             onClick={handleCLick}
             className="px-4 py-2 bg-purple-900 text-white rounded-xl"

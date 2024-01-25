@@ -7,7 +7,6 @@ import ErrorAnimation from "../components/ErrorAnimation";
 
 const BookDetailPage = () => {
   const { id } = useParams();
-  console.log(id);
   const { fetchData, error, loading } = useFetch(`book/${id}`);
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import RecomentComponent from "./Recoment.component";
 
 const SelectBookDetailComponent = ({ fetchData }) => {
   const [readMore, setReadMore] = useState(false);
@@ -14,9 +15,13 @@ const SelectBookDetailComponent = ({ fetchData }) => {
   return (
     <div className=" w-full lg:p-10 md:p-10 flex justify-center items-center">
       <div className="flex lg:flex-row flex-col items-start justify-center w-full">
-        <div className="lg:w-1/3 w-full flex items-start">
+        <div className={`lg:w-1/3 w-full flex items-start relative`}>
+          <div
+            style={{ backgroundImage: `url(${fetchData.imgUrl})` }}
+            className="inset-0 blur-sm lg:h-[600px] h-[300px] w-full absolute  bg-cover bg-blend-multiply bg-gray-800/30"
+          ></div>
           <img
-            className=" lg:object-contain object-cover lg:h-[600px] h-fit w-full drop-shadow-md"
+            className=" lg:object-contain object-contain lg:h-[600px] h-[300px] w-full drop-shadow-md"
             src={fetchData.imgUrl}
             alt="bookcover.jpeg"
           />
@@ -59,17 +64,15 @@ const SelectBookDetailComponent = ({ fetchData }) => {
               <p>Add to cart</p>
             </button>
           </span>
-
           <p
             className={
               readMore
-                ? "lg:text-base text-sm "
-                : "lg:text-base text-sm line-clamp-4"
+                ? "lg:text-base text-sm  leading-loose"
+                : "lg:text-base text-sm line-clamp-4 leading-loose"
             }
           >
             {fetchData.description}
           </p>
-
           <button
             onClick={readMoreHandler}
             className="underline text-sm text-gray-500 my-4 block"
@@ -106,6 +109,8 @@ const SelectBookDetailComponent = ({ fetchData }) => {
               </g>
             </svg>
           </button>
+          {/*recomend component here  */}
+          <RecomentComponent />
         </div>
       </div>
     </div>

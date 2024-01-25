@@ -1,5 +1,4 @@
 import React from "react";
-import BookCardGroupComponent from "../components/BookCardGroup.component";
 import BookPage from "./book.page";
 import HeroComponent from "../components/Hero.component";
 
