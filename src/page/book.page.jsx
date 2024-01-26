@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import useFetch from "../hook/useFetch";
 import LoadingAnimation from "../components/LoadingAnimatin";
 import ErrorAnimation from "../components/ErrorAnimation";

@@ -6,6 +6,7 @@ import StorePage from "./page/Store.page";
 import BookDetailPage from "./page/BookDetail.page";
 import HomePage from "./page/Home.page";
 import FooterComponent from "./components/Footer.component";
+import ErrorPage from "./page/Error.page";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/store/detail/:id" element={<BookDetailPage />} />
         <Route path="/detail/:id" element={<BookDetailPage />} />
         <Route path="/aboutus" element={<AboutPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <FooterComponent />
     </Router>

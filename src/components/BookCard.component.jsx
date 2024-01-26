@@ -1,10 +1,8 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const BookCardComponent = ({ bookData }) => {
   const nav = useNavigate();
-  const location = useLocation();
-  console.log(location.pathname);
   const handleCLick = () => {
     nav(`detail/${bookData.id}`);
   };

@@ -4,6 +4,7 @@ import RecomentComponent from "./Recoment.component";
 
 const SelectBookDetailComponent = ({ fetchData }) => {
   const [readMore, setReadMore] = useState(false);
+
   const nav = useNavigate();
   const handleClick = () => {
     nav(-1);
@@ -12,6 +13,7 @@ const SelectBookDetailComponent = ({ fetchData }) => {
   const readMoreHandler = () => {
     setReadMore(!readMore);
   };
+
   return (
     <div className=" w-full lg:p-10 md:p-10 flex justify-center items-center">
       <div className="flex lg:flex-row flex-col items-start justify-center w-full">
@@ -26,7 +28,7 @@ const SelectBookDetailComponent = ({ fetchData }) => {
             alt="bookcover.jpeg"
           />
         </div>
-        <div className="lg:w-1/2 w-full lg:mx-10 lg:my-5 m-5">
+        <div className="lg:w-1/2 w-full lg:mx-10 lg:my-5 p-5">
           <p className="font-bold text-2xl">{fetchData.book}</p>
           <p className="font-semibold text-sm text-gray-600">
             {fetchData.author}
@@ -110,7 +112,7 @@ const SelectBookDetailComponent = ({ fetchData }) => {
             </svg>
           </button>
           {/*recomend component here  */}
-          <RecomentComponent />
+          <RecomentComponent bookID={fetchData.id} />
         </div>
       </div>
     </div>
