@@ -74,5 +74,19 @@
       "slug": "frankenstein",
       "description": "Few creatures of horror have seized readers' imaginations and held them for so long as the anguished monster of Mary Shelley's Frankenstein. The story of Victor Frankenstein's terrible creation and the havoc it caused has enthralled generations of readers and inspired countless writers of horror and suspense. Considering the gothic novel's enduring success, it is remarkable that it began merely as a whim of Lord Byron's.","price": "39","imgUrl" : "https://m.media-amazon.com/images/I/81TVqiv-ctL._AC_UF1000,1000_QL80_.jpg"
     }
+  ],
+  "user" : [
+    {
+      "id" : "1",
+      "name" : "day",
+      "email": "saingwann@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id" : "2",
+      "name" : "day2",
+      "email": "day.dev@gmail.com",
+      "password": "123456"
+    }
   ]
 }

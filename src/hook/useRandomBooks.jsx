@@ -23,6 +23,7 @@ const useRandomBooks = () => {
       }
 
       // Remove the selected book from allBooks array
+      // to make sure that threre is no duplicate book in the random array
       allBooks.splice(randomIndex, 1);
     }
 

@@ -2,7 +2,8 @@ import React from "react";
 import useRandomBooks from "../hook/useRandomBooks";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const RecomentComponent = ({ bookID }) => {
+const RecomentComponent = () => {
+
   const { randomBooks } = useRandomBooks();
 
   const nav = useNavigate();

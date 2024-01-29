@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const BookCardComponent = ({ bookData }) => {
   const nav = useNavigate();
   const handleCLick = () => {
-    nav(`detail/${bookData.id}`);
+    nav(`detail/${bookData.slug}`);
   };
 
   return (
@@ -20,7 +20,7 @@ const BookCardComponent = ({ bookData }) => {
           <p className="text-xs">{bookData.author}</p>
         </span>
 
-        <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-white -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
+        <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-gray-50 -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
           <p className="font-bold">{bookData.book}</p>
           <p className="text-xs mb-5">{bookData.author}</p>
           <button

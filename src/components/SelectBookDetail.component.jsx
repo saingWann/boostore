@@ -1,11 +1,24 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import RecomentComponent from "./Recoment.component";
 
 const SelectBookDetailComponent = ({ fetchData }) => {
   const [readMore, setReadMore] = useState(false);
-
+  const { slug } = useParams();
   const nav = useNavigate();
+  const [currentBook, setCurrentBook] = useState(null);
+
+  const getSelectedBookData = () => {
+    const selectedBook = fetchData.find((book) => book.slug === slug);
+    console.log(slug, selectedBook);
+    setCurrentBook(selectedBook);
+  };
+
+  useEffect(() => {
+    getSelectedBookData();
+    console.log(currentBook);
+  }, [slug]);
+
   const handleClick = () => {
     nav(-1);
   };
@@ -29,14 +42,10 @@ const SelectBookDetailComponent = ({ fetchData }) => {
           />
         </div>
         <div className="lg:w-1/2 w-full lg:mx-10 lg:my-5 p-5">
-          <p className="font-bold text-2xl">{fetchData.book}</p>
-          <p className="font-semibold text-sm text-gray-600">
-            {fetchData.author}
-          </p>
+          <p className="font-bold text-2xl">hello</p>
+          <p className="font-semibold text-sm text-gray-600">dddaaa</p>
           <span className="my-5 flex gap-10 items-center justify-start">
-            <p className="font-bold text-xl text-purple-600">
-              $ {fetchData.price}
-            </p>
+            <p className="font-bold text-xl text-purple-600">$ 222</p>
             <button className="flex gap-3 items-center bg-purple-600 text-white px-5 py-3 rounded-full hover:bg-purple-500 hover:shadow-md">
               <svg
                 width="20px"
@@ -73,7 +82,7 @@ const SelectBookDetailComponent = ({ fetchData }) => {
                 : "lg:text-base text-sm line-clamp-4 leading-loose"
             }
           >
-            {fetchData.description}
+            asfasf
           </p>
           <button
             onClick={readMoreHandler}
@@ -112,7 +121,7 @@ const SelectBookDetailComponent = ({ fetchData }) => {
             </svg>
           </button>
           {/*recomend component here  */}
-          <RecomentComponent bookID={fetchData.id} />
+          <RecomentComponent />
         </div>
       </div>
     </div>
