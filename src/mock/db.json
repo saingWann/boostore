@@ -73,6 +73,41 @@
       "author": "Mary Shelley",
       "slug": "frankenstein",
       "description": "Few creatures of horror have seized readers' imaginations and held them for so long as the anguished monster of Mary Shelley's Frankenstein. The story of Victor Frankenstein's terrible creation and the havoc it caused has enthralled generations of readers and inspired countless writers of horror and suspense. Considering the gothic novel's enduring success, it is remarkable that it began merely as a whim of Lord Byron's.","price": "39","imgUrl" : "https://m.media-amazon.com/images/I/81TVqiv-ctL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": "11",
+      "book": "Atomic Habit",
+      "author": "Jame Clear",
+      "slug": "atomic-habit",
+      "description": "Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.","price": "13.85","imgUrl" :"https://m.media-amazon.com/images/I/81YkqyaFVEL._SY342_.jpg"
+    },
+    {
+      "id": "12",
+      "book": "Iron Flame",
+      "author": "Rebecca Yarrors",
+      "slug": "iron-flame",
+      "description": "Everyone expected Violet Sorrengail to die during her first year at Basgiath War College―Violet included. But Threshing was only the first impossible test meant to weed out the weak-willed, the unworthy, and the unlucky.Now the real training begins, and Violet’s already wondering how she’ll get through. It’s not just that it’s grueling and maliciously brutal, or even that it’s designed to stretch the riders’ capacity for pain beyond endurance. It’s the new vice commandant, who’s made it his personal mission to teach Violet exactly how powerless she is–unless she betrays the man she loves.Although Violet’s body might be weaker and frailer than everyone else’s, she still has her wits―and a will of iron. And leadership is forgetting the most important lesson Basgiath has taught her: Dragon riders make their own rules.","price": "18.85","imgUrl" :"https://m.media-amazon.com/images/I/917Bc9C1MlL._SY342_.jpg"
+    },
+    {
+      "id": "13",
+      "book": "Spare",
+      "author": "Prince Harry",
+      "slug": "spare",
+      "description": "It was one of the most searing images of the twentieth century: two young boys, two princes, walking behind their mother’s coffin as the world watched in sorrow—and horror. As Princess Diana was laid to rest, billions wondered what Prince William and Prince Harry must be thinking and feeling—and how their lives would play out from that point on.For Harry, this is that story at last.","price": "18.85","imgUrl" :"https://m.media-amazon.com/images/I/91Szm8FpdfL._SY342_.jpg"
+    },
+    {
+      "id": "14",
+      "book": "Fourth Wing",
+      "author": "Rebecca Yarrors",
+      "slug": "fourth-wing",
+      "description": "Twenty-year-old Violet Sorrengail was supposed to enter the Scribe Quadrant, living a quiet life among books and history. Now, the commanding general―also known as her tough-as-talons mother―has ordered Violet to join the hundreds of candidates striving to become the elite of Navarre: dragon riders. But when you’re smaller than everyone else and your body is brittle, death is only a heartbeat away...because dragons don’t bond to “fragile” humans. They incinerate them. With fewer dragons willing to bond than cadets, most would kill Violet to better their own chances of success. The rest would kill her just for being her mother’s daughter―like Xaden Riorson, the most powerful and ruthless wingleader in the Riders Quadrant.","price": "16.88","imgUrl" :"https://m.media-amazon.com/images/I/91n7p-j5aqL._SY342_.jpg"
+    },
+    {
+      "id": "15",
+      "book": "The Boy Keeps The Score",
+      "author": "Bassel van der Kolk",
+      "slug": "the-boy-keeps-the-score",
+      "description": "Trauma is a fact of life. Veterans and their families deal with the painful aftermath of combat; one in five Americans has been molested; one in four grew up with alcoholics; one in three couples have engaged in physical violence. Dr. Bessel van der Kolk, one of the world’s foremost experts on trauma, has spent over three decades working with survivors. In The Body Keeps the Score, he uses recent scientific advances to show how trauma literally reshapes both body and brain, compromising sufferers’ capacities for pleasure, engagement, self-control, and trust. He explores innovative treatments—from neurofeedback and meditation to sports, drama, and yoga—that offer new paths to recovery by activating the brain’s natural neuroplasticity. Based on Dr. van der Kolk’s own research and that of other leading specialists, The Body Keeps the Score exposes the tremendous power of our relationships both to hurt and to heal—and offers new hope for reclaiming lives.","price": "10.19","imgUrl" :"https://m.media-amazon.com/images/I/71-OnTj8N8L._AC_UF1000,1000_QL80_.jpg"
     }
   ],
   "user" : [

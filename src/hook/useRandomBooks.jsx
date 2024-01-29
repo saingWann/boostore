@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import useFetch from "./useFetch";
+import { useParams } from "react-router-dom";
 
 const useRandomBooks = () => {
+  const { slug } = useParams();
   const { fetchData } = useFetch("book");
   const [randomBooks, setRandomBooks] = useState([]);
 
@@ -18,7 +20,8 @@ const useRandomBooks = () => {
         (book) => book.id === selectedBook.id
       );
 
-      if (!isBookInArray) {
+      if (!isBookInArray && selectedBook.slug !== slug) {
+        console.log(slug);
         randomBooksArray.push(selectedBook);
       }
 

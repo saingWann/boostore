@@ -3,13 +3,12 @@ import useRandomBooks from "../hook/useRandomBooks";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const RecomentComponent = () => {
-
   const { randomBooks } = useRandomBooks();
 
   const nav = useNavigate();
   const location = useLocation();
 
-  const handleOverwriteLastPath = (id) => {
+  const handleOverwriteLastPath = (slug) => {
     // Get the current pathname
     const currentPath = location.pathname;
 
@@ -18,7 +17,7 @@ const RecomentComponent = () => {
     const newPath = currentPath.substring(0, lastIndex);
 
     // Use the navigate function to update the URL
-    nav(`${newPath}/${id}`);
+    nav(`${newPath}/${slug}`);
     // console.log(`navigate to ${newPath}/${id}`);
   };
 
@@ -27,12 +26,16 @@ const RecomentComponent = () => {
       <p className="lg:px-0 py-5 lg:mt-20 md:mt-10 mt-4 px-4 text-xl font-bold underline">
         Recomended for you
       </p>
-      <div className="w-full flex lg:flex-row flex-col gap-2">
+      <div className="w-full flex xl:flex-row flex-col gap-2">
         {randomBooks.map((bookData) => (
-          <div key={bookData.id} className="lg:w-1/4 w-full">
-            <div className="lg:h-[300px] h-fit flex flex-col justify-start gap-3 overflow-hidden shadow-md p-3 rounded-lg relative group">
+          <div key={bookData.id} className="xl:w-1/4 w-full">
+            <div className="lg:h-[300px] h-fit flex flex-col justify-start gap-3 overflow-hidden shadow-md rounded-lg relative group">
+              <div
+                style={{ backgroundImage: `url(${bookData.imgUrl})` }}
+                className=" blur-sm lg:h-[200px] h-[200px] w-full  bg-cover bg-blend-multiply bg-gray-800/50 opacity-50"
+              ></div>
               <img
-                className="lg:object-contain object-contain lg:bg-white bg-slate-300 p-2 rounded-lg lg:h-[200px] h-[200px] w-full"
+                className="lg:object-contain object-contain p-2 rounded-lg lg:h-[200px] h-[200px] w-full absolute inset-0"
                 src={bookData.imgUrl}
                 alt="bookCover.jpeg"
               />
@@ -46,9 +49,9 @@ const RecomentComponent = () => {
                 <p className="text-xs mb-5">{bookData.author}</p>
                 <button
                   onClick={() => {
-                    handleOverwriteLastPath(bookData.id);
+                    handleOverwriteLastPath(bookData.slug);
                   }}
-                  className="px-4 py-2 bg-purple-900 text-white rounded-xl"
+                  className="px-4 text-xs font-semibold py-2 bg-purple-900 text-white rounded-xl"
                 >
                   More Detail
                 </button>
