@@ -16,7 +16,7 @@ const BookCardComponent = ({ bookData }) => {
           src={bookData.imgUrl}
           alt="bookCover.jpeg"
         />
-        <span className="w-full flex flex-col items-start">
+        <span className=" w-full flex flex-col items-center">
           <p className="font-bold">{bookData.book}</p>
           <p className="text-xs">{bookData.author}</p>
         </span>

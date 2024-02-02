@@ -14,6 +14,7 @@ const BookDetailComponent = ({ selectedBook }) => {
     nav(-1);
   };
 
+  console.log("render from book detail coponent");
   const readMoreHandler = () => {
     setReadMore(!readMore);
   };
