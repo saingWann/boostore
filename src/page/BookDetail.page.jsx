@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useFetch from "../hook/useFetch";
 import SelectBookCcomponent from "../components/SelectBookDetail.component";
 import LoadingAnimation from "../components/LoadingAnimatin";
 import ErrorAnimation from "../components/ErrorAnimation";
+import { AllBookData } from "../context/BookData.context";
 
 const BookDetailPage = () => {
   // const { slug } = useParams();
-  const { fetchData, error, loading } = useFetch(`book`);
+  const { fetchBookData, error, loading } = useContext(AllBookData);
 
   return (
     <div>
       {loading && <LoadingAnimation />}
       {error && <ErrorAnimation />}
-      {fetchData && <SelectBookCcomponent fetchData={fetchData} />}
+      {fetchBookData && <SelectBookCcomponent fetchData={fetchBookData} />}
     </div>
   );
 };

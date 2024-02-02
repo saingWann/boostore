@@ -7,21 +7,24 @@ import BookDetailPage from "./page/BookDetail.page";
 import HomePage from "./page/Home.page";
 import FooterComponent from "./components/Footer.component";
 import ErrorPage from "./page/Error.page";
+import BookDataContext from "./context/BookData.context";
 
 const App = () => {
   return (
-    <Router>
-      <NavbarComponent />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/store" element={<StorePage />} />
-        <Route path="/store/detail/:slug" element={<BookDetailPage />} />
-        <Route path="/detail/:slug" element={<BookDetailPage />} />
-        <Route path="/aboutus" element={<AboutPage />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      <FooterComponent />
-    </Router>
+    <BookDataContext>
+      <Router>
+        <NavbarComponent />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/store" element={<StorePage />} />
+          <Route path="/store/detail/:slug" element={<BookDetailPage />} />
+          <Route path="/detail/:slug" element={<BookDetailPage />} />
+          <Route path="/aboutus" element={<AboutPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+        <FooterComponent />
+      </Router>
+    </BookDataContext>
   );
 };
 

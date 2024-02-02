@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { categories } from "../lib/storePgaeConstant";
 import BookPage from "./book.page";
+import BookCardGroupComponent from "../components/BookCardGroup.component";
+import { AllBookData } from "../context/BookData.context";
+import LoadingAnimation from "../components/LoadingAnimatin";
 
 const StorePage = () => {
+  const { fetchBookData, error, loading } = useContext(AllBookData);
+
   return (
     <section>
       <div className="min-h-[20rem] flex flex-col items-center justify-center bg-storeBg bg-gray-900/40 bg-blend-multiply text-white">
@@ -37,8 +42,8 @@ const StorePage = () => {
           );
         })}
       </div>
-
-      <BookPage />
+      {loading && <LoadingAnimation />}
+      {fetchBookData && <BookCardGroupComponent fetchData={fetchBookData} />}
     </section>
   );
 };

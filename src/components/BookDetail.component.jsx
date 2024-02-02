@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import RecomentComponent from "./Recoment.component";
@@ -7,6 +7,9 @@ const BookDetailComponent = ({ selectedBook }) => {
   const [readMore, setReadMore] = useState(false);
   const nav = useNavigate();
 
+  useEffect(() => {
+    setReadMore(false);
+  }, [selectedBook]);
   const handleClick = () => {
     nav(-1);
   };

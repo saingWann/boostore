@@ -21,6 +21,7 @@ const RecomentComponent = () => {
     // console.log(`navigate to ${newPath}/${id}`);
   };
 
+  console.log("render from recomend coponent", randomBooks);
   return (
     <>
       <p className="lg:px-0 py-5 lg:mt-20 md:mt-10 mt-4 px-4 text-xl font-bold underline">

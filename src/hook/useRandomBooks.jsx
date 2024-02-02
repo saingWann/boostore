@@ -21,7 +21,7 @@ const useRandomBooks = () => {
       );
 
       if (!isBookInArray && selectedBook.slug !== slug) {
-        console.log(slug);
+        // console.log(slug);
         randomBooksArray.push(selectedBook);
       }
 
@@ -30,17 +30,15 @@ const useRandomBooks = () => {
       allBooks.splice(randomIndex, 1);
     }
 
-    setRandomBooks((prevRandomBooks) => [
-      ...prevRandomBooks,
-      ...randomBooksArray,
-    ]);
+    setRandomBooks([...randomBooksArray]);
   };
 
+  console.log("use Random book");
   useEffect(() => {
     if (fetchData) {
       getRandomBooks();
     }
-  }, [fetchData]); // Watch for changes in fetchData
+  }, [fetchData, slug]); // Watch for changes in fetchData
 
   return { randomBooks };
 };
