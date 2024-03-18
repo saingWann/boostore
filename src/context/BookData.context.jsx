@@ -10,7 +10,7 @@ const BookDataContext = ({ children }) => {
     loading: false,
   });
 
-  const { fetchData, error, loading } = useFetch("book");
+  const { fetchData, error, loading } = useFetch("books");
 
   useEffect(() => {
     setData({

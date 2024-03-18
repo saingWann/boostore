@@ -8,11 +8,13 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "api": "json-server ./src/db/mock.json --port 8001"
+    "api": "json-server ./src/mock/db.json --port 8001"
   },
   "dependencies": {
     "axios": "^1.6.6",
+    "framer-motion": "^11.0.14",
     "json-server": "^1.0.0-alpha.21",
+    "lucide-react": "^0.358.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",

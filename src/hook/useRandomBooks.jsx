@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 const useRandomBooks = () => {
   const { slug } = useParams();
-  const { fetchData } = useFetch("book");
+  const { fetchData } = useFetch("books");
   const [randomBooks, setRandomBooks] = useState([]);
 
   const getRandomBooks = () => {

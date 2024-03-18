@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroComponent = () => {
   return (
-    <div className="bg-hero-pattern h-[500px] bg-slate-800/40 bg-blend-multiply justify-center items-center flex">
+    <div className="bg-hero-pattern h-[600px] bg-slate-800/40 bg-blend-multiply justify-center items-center flex">
       <div className="container mx-auto flex flex-col items-center text-white ">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">
           Dive into the World of Literature
