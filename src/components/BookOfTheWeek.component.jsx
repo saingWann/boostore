@@ -9,27 +9,28 @@ const BookOfTheWeekComponent = () => {
     nav(`detail/${bookOftheWeek.slug}`);
   };
   const bookOftheWeek = {
-    id: "11",
-    book: "Atomic Habit",
-    author: "Jame Clear",
-    slug: "atomic-habit",
+    id: "5",
+    book: "Harry Potter and the Philosopher's Stone",
+    author: "J.K. Rowling",
+    slug: "harry-potter",
     description:
-      "Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.",
-    price: "13.85",
-    imgUrl: "https://m.media-amazon.com/images/I/81YkqyaFVEL._SY342_.jpg",
+      "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
+    price: "39.99",
+    imgUrl:
+      "https://bci.kinokuniya.com/th/jsp/images/book-img/97814/97814088/9781408855652.JPG",
   };
   return (
-    <div className="lg:py-20">
+    <div className="lg:py-20 py-10 min-h-screen flex items-center">
       <ContainerComponent>
-        <h1 className="text-center font-serif font-bold text-3xl capitalize">
+        <h1 className="text-center font-serif font-bold lg:text-3xl text-2xl capitalize">
           Author of the week
         </h1>
-        <div className="w-[230px] h-2 mx-auto bg-purple-700 lg:mb-16 mb-10 mt-2"></div>
+        <div className="lg:w-[230px] w-[150px] h-2 mx-auto bg-purple-700 lg:mb-16 mb-10 mt-2"></div>
         <div className="flex lg:flex-row flex-col ">
           {/* thebook */}
-          <div className="w-1/3">
-            <div className="lg:h-[400px] md:h-[300px] h-[200px] flex flex-col justify-start items-start gap-3 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 p-3 rounded-lg relative group">
-              <div className="lg:h-[300px] overflow-hidden h-[300px] w-full ">
+          <div className="lg:w-1/3 w-full">
+            <div className=" flex flex-col justify-start items-start gap-3 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 p-3 rounded-lg relative group">
+              <div className="lg:h-[400px] md:h-[300px] h-[250px] overflow-hidden  w-full ">
                 <img
                   className="object-cover  w-full h-full transition-all duration-200  hover:scale-105"
                   src={bookOftheWeek.imgUrl}
@@ -54,15 +55,50 @@ const BookOfTheWeekComponent = () => {
               </span>
             </div>
           </div>
-          <div className="w-1/3 lg:px-10 ">
+          <div className="lg:w-1/3 w-full lg:px-10 lg:py-0 lg:m-0 mt-10 overflow-hidden group relative">
             <img
-              src="https://tqueremos.tec.mx/sites/g/files/vgjovo1136/files/Aurum-Speakers-Bureau-James-Clear_0.jpeg"
+              src="https://m.media-amazon.com/images/S/amzn-author-media-prod/8cigckin175jtpsk3gs361r4ss.jpg"
               alt="author photo"
-              className="object-cover h-full"
+              className="object-cover lg:h-full h-[300px] w-full rounded-lg hover:scale-105  transition-all duration-300"
             />
+            <a
+              href="https://www.jkrowling.com/"
+              target="blank"
+              className="underline text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-2 right-14 cursor-pointer hover:text-gray-500"
+            >
+              more about author
+            </a>
           </div>
 
-          <div className="w-1/3"></div>
+          <div className="lg:w-1/3 w-full lg:p-0 md:p-5 p-4">
+            <p className="font-bold lg:text-4xl text-2xl font-serif mb-3">
+              J.K. Rowling
+            </p>
+            <q className="text-xl">
+              It is impossible to live without failing at something, unless you
+              live so cautiously that you might as well not have lived at all,
+              in which case you have failed by default.
+            </q>
+
+            <div className="lg:mt-10 mt-5 flex flex-col gap-4 bg-gray-100 p-3">
+              <h1 className="font-bold lg:text-xl">Honours & Awards</h1>
+              <p>
+                J.K. Rowling has received many honours and awards, including:
+              </p>
+              <ul className="flex flex-col text-base gap-2">
+                <li>
+                  Companion of Honour, for services to literature and
+                  philanthropy, 2017
+                </li>
+                <li>PEN America Literary Service Award, 2016</li>
+                <li>Freedom of the City of London, 2012</li>
+                <li>Lifetime Achievement Award, British Book Awards, 2008</li>
+                <li>South Bank Show Award for Outstanding Achievement, 2008</li>
+                <li>James Joyce Award, University College Dublin, 2008</li>
+                <li>and more...</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </ContainerComponent>
     </div>

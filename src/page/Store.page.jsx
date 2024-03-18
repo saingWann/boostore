@@ -9,7 +9,7 @@ const StorePage = () => {
   const { fetchBookData, error, loading } = useContext(AllBookData);
 
   return (
-    <section>
+    <section className="pt-12">
       <div className="min-h-[20rem] flex flex-col items-center justify-center bg-storeBg bg-gray-900/40 bg-blend-multiply text-white">
         <h1 className="text-4xl font-bold pb-4">
           Welcome to Your BookShopByDay!

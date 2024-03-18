@@ -9,8 +9,8 @@ const BookCardComponent = ({ bookData }) => {
   };
 
   return (
-    <div className="p-4 lg:w-1/4 md:w-1/3 sm:w-1/3 w-1/2 ">
-      <div className="lg:h-[400px] md:h-[300px] h-[200px] flex flex-col justify-start items-start gap-3 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 p-3 rounded-lg relative group">
+    <div className="p-4 lg:w-1/4 md:w-1/3 sm:w-1/2 w-full ">
+      <div className="lg:h-[400px]  flex flex-col justify-start items-start gap-3 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 p-3 rounded-lg relative group">
         <div className="lg:h-[300px] overflow-hidden h-[300px] w-full ">
           <img
             className="object-cover  w-full h-full transition-all duration-200  hover:scale-105"

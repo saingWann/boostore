@@ -11,7 +11,7 @@ const BookDetailPage = () => {
   const { fetchBookData, error, loading } = useContext(AllBookData);
 
   return (
-    <div>
+    <div className="pt-12">
       {loading && <LoadingAnimation />}
       {error && <ErrorAnimation />}
       {fetchBookData && <SelectBookCcomponent fetchData={fetchBookData} />}

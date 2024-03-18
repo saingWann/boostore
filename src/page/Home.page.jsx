@@ -14,6 +14,7 @@ const HomePage = () => {
       <NewArrival />
       <PromotionCTAComponent />
       <BookOfTheWeekComponent />
+      <PromotionCTAComponent />
       {/* <BookPage /> */}
     </section>
   );

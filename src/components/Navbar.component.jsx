@@ -26,7 +26,7 @@ const NavbarComponent = () => {
     ClassName();
   }, [open]);
   return (
-    <nav className="lg:px-20 lg:py-5 p-3 bg-purple-900 text-white font-bold flex justify-between items-center">
+    <nav className=" fixed w-full  z-20 lg:px-20 lg:py-5 p-3 bg-purple-900 text-white font-bold flex justify-between items-center">
       <NavLink to="/">BookShopbyDay</NavLink>
       <ul className="flex justify-between gap-4 lg:text-base text-xs max-sm:hidden">
         <li>
@@ -40,7 +40,7 @@ const NavbarComponent = () => {
         </li>
       </ul>
       <UseAnimations
-        className="fixed right-5 top-2 z-20 max-sm:block hidden"
+        className=" max-sm:block hidden"
         animation={menu4}
         strokeColor="#ffffff"
         size={30}
