@@ -24,16 +24,13 @@ const BookCardComponent = ({ bookData }) => {
           </p>
           <p className="text-xs">{bookData.author}</p>
         </span>
-
-        <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-gray-100 -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
-          <p className="font-bold text-purple-900">{bookData.book}</p>
+        <span className="px-4 py-2 absolute bg-white/80 backdrop-blur-md font-bold rounded-ee-lg rounded-es-lg left-5 -top-20 transition-all duration-300 group-hover:top-3">
+          {bookData.price}$
+        </span>
+        <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-white/80 backdrop-blur-md -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
+          <p className="font-bold">{bookData.book}</p>
           <p className="text-xs mb-5">{bookData.author}</p>
-          {/* <button
-            onClick={handleCLick}
-            className="px-4 py-2 bg-purple-900 text-white rounded-xl hover:shadow-lg hover:bg-purple-800"
-          >
-            More Detail
-          </button> */}
+
           <BookCardButton handleCLick={handleCLick}>
             <p>More Detail</p>
           </BookCardButton>

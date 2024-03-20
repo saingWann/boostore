@@ -25,7 +25,11 @@ const BookOfTheWeekComponent = () => {
         <h1 className="text-center font-serif font-bold lg:text-3xl text-2xl capitalize">
           Author of the week
         </h1>
-        <div className="lg:w-[230px] w-[150px] h-2 mx-auto bg-purple-700 lg:mb-16 mb-10 mt-2"></div>
+        <div className="w-[130px] h-2 mx-auto bg-purple-700  my-2"></div>
+        <p className="text-center font-bold mb-10">
+          Let's take a moment to appreciate the one who bring us good shit thing
+          to life.
+        </p>
         <div className="flex lg:flex-row flex-col ">
           {/* thebook */}
           <div className="lg:w-1/3 w-full">
@@ -44,7 +48,10 @@ const BookOfTheWeekComponent = () => {
                 <p className="text-xs">{bookOftheWeek.author}</p>
               </span>
 
-              <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-gray-100 -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
+              <span className="px-4 py-2 absolute bg-white/80 backdrop-blur-md font-bold rounded-ee-lg rounded-es-lg left-5 -top-20 transition-all duration-300 group-hover:top-3">
+                {bookOftheWeek.price}$
+              </span>
+              <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-white/80 backdrop-blur-md -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
                 <p className="font-bold text-purple-900">
                   {bookOftheWeek.book}
                 </p>
