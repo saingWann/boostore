@@ -24,7 +24,7 @@ const RecomentComponent = () => {
   console.log("render from recomend coponent", randomBooks);
   return (
     <>
-      <p className="lg:px-0 py-5 lg:mt-20 md:mt-10 mt-4 px-4 text-xl font-bold underline">
+      <p className="lg:px-0 py-3 lg:mt-20 mt-10 px-4 text-xl font-bold border-t border-b border-black mb-4">
         Recomended for you
       </p>
       <div className="w-full flex xl:flex-row flex-col lg:gap-4 gap-10">
@@ -40,12 +40,12 @@ const RecomentComponent = () => {
                 src={bookData.imgUrl}
                 alt="bookCover.jpeg"
               />
-              <span className="w-full flex flex-col items-start">
+              <span className="w-full flex flex-col items-start py-5">
                 <p className="font-bold text-xs">{bookData.book}</p>
                 <p className="text-xs">{bookData.author}</p>
               </span>
 
-              <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-gray-50 -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
+              <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-gray-50 -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0">
                 <p className="font-bold">{bookData.book}</p>
                 <p className="text-xs mb-5">{bookData.author}</p>
                 <button

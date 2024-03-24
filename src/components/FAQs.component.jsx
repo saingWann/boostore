@@ -14,7 +14,7 @@ const FAQsComponent = () => {
     }
   };
   return (
-    <section className="lg:py-20 py-10">
+    <section className="lg:py-20 py-10 max-sm:px-6">
       <ContainerComponent>
         <div className="flex lg:flex-row md:flex-col flex-col gap-10 items-start justify-start">
           <div className="lg:w-1/2 md:w-1/2 w-full max-sm:px-4">
@@ -35,7 +35,7 @@ const FAQsComponent = () => {
                 <span
                   className={`flex justify-between items-center border-b py-3 px-6 border-black ${
                     isOpen.show && isOpen.currentOpenTag === index
-                      ? "bg-black text-white rounded-t-lg"
+                      ? "bg-gradient-to-r from-black to-black/80 text-white rounded-t-lg"
                       : ""
                   }`}
                 >

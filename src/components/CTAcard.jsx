@@ -14,11 +14,11 @@ const CTAcard = ({ title, subTitle, message, discount }) => {
       <p className="text-center font-bold lg:text-6xl md:text-4xl text-3xl uppercase">
         {title}
       </p>
-      <div className="flex  my-2">
-        <p className="text-center lg:px-3 lg:py-2 p-1 lg:text-3xl uppercase border-2 border-black font-bold">
+      <div className="flex items-center my-2">
+        <p className="text-center lg:px-3 lg:py-2 p-2 lg:text-3xl text-sm uppercase border-2 border-black font-bold">
           {message}
         </p>
-        <p className="bg-black lg:px-3 lg:py-2 p-1 lg:text-3xl text-white font-bold -translate-x-1 border-black border-2">
+        <p className="bg-black lg:px-3 lg:py-2 p-2 lg:text-3xl text-sm text-white font-bold -translate-x-1 border-black border-2">
           {discount}
         </p>
       </div>

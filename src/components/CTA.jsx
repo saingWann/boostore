@@ -35,7 +35,7 @@ export default function CTA() {
       >
         <div
           slot="container-start"
-          className="bg-ctaBg bg-no-repeat bg-cover bg-center  absolute top-0 left-0 w-[130%] h-full"
+          className="bg-[url('./assets/ctaBg.png')] bg-no-repeat bg-cover bg-center  absolute top-0 left-0 w-[130%] h-full"
           data-swiper-parallax="-23%"
         ></div>
 
