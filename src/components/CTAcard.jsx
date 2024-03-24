@@ -15,7 +15,7 @@ const CTAcard = ({ title, subTitle, message, discount }) => {
         {title}
       </p>
       <div className="flex  my-2">
-        <p className="text-center lg:px-3 lg:py-2 p-1 lg:text-3xl uppercase border-2 font-bold">
+        <p className="text-center lg:px-3 lg:py-2 p-1 lg:text-3xl uppercase border-2 border-black font-bold">
           {message}
         </p>
         <p className="bg-black lg:px-3 lg:py-2 p-1 lg:text-3xl text-white font-bold -translate-x-1 border-black border-2">
@@ -23,7 +23,7 @@ const CTAcard = ({ title, subTitle, message, discount }) => {
         </p>
       </div>
       <button
-        className="w-fit flex items-center  gap-3 bg-purple-900 text-white px-6 py-2 font-bold uppercase rounded-xl hover:bg-purple-600 max-sm:text-xs active:bg-purple-900 focus:bg-purple-600 group"
+        className="w-fit flex items-center  gap-3 bg-purple-900 text-white px-6 py-4 font-bold uppercase rounded-xl hover:bg-purple-600 max-sm:text-xs active:bg-purple-900 focus:bg-purple-600 group"
         onClick={handleNav}
       >
         <p>Shop Now</p>

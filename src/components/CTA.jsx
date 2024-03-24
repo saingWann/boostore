@@ -30,7 +30,7 @@ export default function CTA() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        navigation={true}
+        // navigation={true}
         modules={[Parallax, Pagination, Navigation, Autoplay]}
       >
         <div

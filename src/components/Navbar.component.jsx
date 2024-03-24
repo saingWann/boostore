@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import UseAnimations from "react-useanimations";
 import menu4 from "react-useanimations/lib/menu4";
+import ContainerComponent from "./Container.component";
 
 const NavbarComponent = () => {
   const [open, setOpen] = useState(false);
@@ -26,21 +27,23 @@ const NavbarComponent = () => {
     ClassName();
   }, [open]);
   return (
-    <nav className=" fixed w-full  z-20 lg:px-20 lg:py-5 p-3 bg-purple-900 text-white font-bold flex justify-between items-center">
-      <div className="w-3/4 mx-auto flex justify-between">
-        <NavLink to="/">BookShopbyDay</NavLink>
-        <ul className="flex justify-between gap-4 lg:text-base text-xs max-sm:hidden">
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/store">Store</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/aboutus"}>About us</NavLink>
-          </li>
-        </ul>
-      </div>
+    <nav className=" fixed w-full  z-20 lg:px-20 lg:py-5 p-3 bg-black text-white font-bold flex justify-between items-center">
+      <ContainerComponent>
+        <div className="flex justify-between">
+          <NavLink to="/">BookShopbyDay</NavLink>
+          <ul className="flex justify-between gap-4 lg:text-base text-xs max-sm:hidden">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/store">Store</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/aboutus"}>About us</NavLink>
+            </li>
+          </ul>
+        </div>
+      </ContainerComponent>
       <UseAnimations
         className=" max-sm:block hidden"
         animation={menu4}

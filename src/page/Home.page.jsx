@@ -7,6 +7,7 @@ import PromotionCTAComponent from "../components/PromotionCTA.component";
 import BookOfTheWeekComponent from "../components/BookOfTheWeek.component";
 import CustomerReview from "../components/CustomerReview.component";
 import CTA from "../components/CTA";
+import FAQsComponent from "../components/FAQs.component";
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <BookOfTheWeekComponent />
       <PromotionCTAComponent />
       <CustomerReview />
+      <FAQsComponent />
     </section>
   );
 };

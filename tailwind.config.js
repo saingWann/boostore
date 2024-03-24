@@ -13,7 +13,7 @@ export default {
         'cta': "url('./src/assets/cta.jpg')",
        'storeBg1' : "url(./src/assets/storepageHeroBg.jpg)",
        'storeBg2' : "url(./src/assets/storepageHeroBg1.jpg)",
-       'ctaBg' : "url(./src/assets/ctaBg.svg)",
+       'ctaBg' : "url(./src/assets/ctaBg.png)",
        
       }
     },

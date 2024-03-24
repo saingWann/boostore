@@ -22,11 +22,11 @@ const BookOfTheWeekComponent = () => {
   return (
     <div className="lg:py-20 py-10 min-h-screen flex items-center">
       <ContainerComponent>
-        <h1 className="text-center font-serif font-bold lg:text-3xl text-2xl capitalize">
+        <h1 className="text-center font-serif font-bold lg:text-5xl text-2xl capitalize">
           Author of the week
         </h1>
-        <div className="w-[130px] h-2 mx-auto bg-purple-700  my-2"></div>
-        <p className="text-center font-bold mb-10">
+        <div className="w-[330px] h-2 mx-auto bg-purple-700  my-2"></div>
+        <p className="text-center font-bold lg:mb-14 mb-10">
           Let's take a moment to appreciate the one who bring us good shit thing
           to life.
         </p>

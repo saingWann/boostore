@@ -2,7 +2,7 @@ import React from "react";
 
 const FooterComponent = () => {
   return (
-    <footer className="text-white body-font bg-purple-900">
+    <footer className="text-white body-font bg-black">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <p className="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4">
           © 2024 BookShopByDay. —
