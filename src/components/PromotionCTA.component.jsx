@@ -2,8 +2,8 @@ import React from "react";
 
 const PromotionCTAComponent = () => {
   return (
-    <div className="bg-no-repeat bg-center bg-cover">
-      <div className="py-10 lg:py-32 md:py-20 flex flex-col items-center gap-4 bg-purple-300/20 backdrop-blur-md ">
+    <div className="lg:pb-20 p-10">
+      <div className="py-10 lg:py-32 md:py-20 flex flex-col items-center gap-4 border-black border-t-2 border-b-2 ">
         <h1 className="uppercase font-bold text-center lg:text-4xl md:text-2xl text-xl">
           Shop wide range of collections
         </h1>

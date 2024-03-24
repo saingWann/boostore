@@ -6,6 +6,7 @@ import NewArrival from "../components/NewArrival.component";
 import PromotionCTAComponent from "../components/PromotionCTA.component";
 import BookOfTheWeekComponent from "../components/BookOfTheWeek.component";
 import CustomerReview from "../components/CustomerReview.component";
+import CTA from "../components/CTA";
 
 const HomePage = () => {
   return (
@@ -13,8 +14,9 @@ const HomePage = () => {
       <HeroComponent />
       <BenifitComponent />
       <NewArrival />
-      <PromotionCTAComponent />
+      <CTA />
       <BookOfTheWeekComponent />
+      <PromotionCTAComponent />
       <CustomerReview />
     </section>
   );
