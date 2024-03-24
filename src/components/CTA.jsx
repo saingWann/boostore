@@ -13,7 +13,7 @@ import CTAcard from "./CTAcard";
 
 export default function CTA() {
   return (
-    <section className="bg-red-100 relative">
+    <section className=" relative">
       <Swiper
         style={{
           "--swiper-navigation-color": "black",

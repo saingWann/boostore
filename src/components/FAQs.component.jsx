@@ -57,7 +57,7 @@ const FAQsComponent = () => {
                   </button>
                 </span>
                 <p
-                  className={` px-6 rounded-b-xl shadow-md transition-all duration-300 bg-gray-50 overflow-hidden *:lg:text-base md:text-base text-sm 
+                  className={` px-6 rounded-b-xl shadow-md transition-all ease-in-out duration-300 bg-gray-50 overflow-hidden *:lg:text-base md:text-base text-sm 
                   ${
                     isOpen.show && isOpen.currentOpenTag === index
                       ? "h-fit lg:py-8 py-4"

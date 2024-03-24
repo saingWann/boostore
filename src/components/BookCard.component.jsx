@@ -28,7 +28,7 @@ const BookCardComponent = ({ bookData }) => {
           {bookData.price}$
         </span>
         <span className="w-full px-5 pt-5 pb-10 flex flex-col items-center justify-center absolute bg-white/80 backdrop-blur-md -bottom-[20rem] left-0 transition-all duration-200 group-hover:bottom-0 ">
-          <p className="font-bold">{bookData.book}</p>
+          <p className="font-bold text-center">{bookData.book}</p>
           <p className="text-xs mb-5">{bookData.author}</p>
 
           <BookCardButton handleCLick={handleCLick}>
