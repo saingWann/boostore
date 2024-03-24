@@ -33,11 +33,15 @@ const BookDetailComponent = ({ selectedBook }) => {
             alt="bookcover.jpeg"
           />
         </div>
-        <div className="lg:w-1/2 w-full lg:mx-10 lg:my-5 p-5">
-          <p className="font-bold lg:text-4xl text-2xl">{selectedBook.book}</p>
-          <p className="font-semibold lg:text-base text-sm text-gray-600/70 pt-2">
-            {selectedBook.author}
-          </p>
+        <div className="lg:w-1/2 w-full lg:mx-10  p-5">
+          <div className="border-t border-b py-2 border-black">
+            <p className="font-bold lg:text-4xl text-2xl">
+              {selectedBook.book}
+            </p>
+            <p className="font-semibold lg:text-base text-sm text-gray-600/70 pt-2">
+              {selectedBook.author}
+            </p>
+          </div>
           <span className="my-5 flex gap-10 items-center justify-start">
             <p className="font-bold text-xl text-purple-600">
               $ {selectedBook.price}

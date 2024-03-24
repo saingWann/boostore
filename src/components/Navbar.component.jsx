@@ -27,18 +27,20 @@ const NavbarComponent = () => {
   }, [open]);
   return (
     <nav className=" fixed w-full  z-20 lg:px-20 lg:py-5 p-3 bg-purple-900 text-white font-bold flex justify-between items-center">
-      <NavLink to="/">BookShopbyDay</NavLink>
-      <ul className="flex justify-between gap-4 lg:text-base text-xs max-sm:hidden">
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/store">Store</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/aboutus"}>About us</NavLink>
-        </li>
-      </ul>
+      <div className="w-3/4 mx-auto flex justify-between">
+        <NavLink to="/">BookShopbyDay</NavLink>
+        <ul className="flex justify-between gap-4 lg:text-base text-xs max-sm:hidden">
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/store">Store</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/aboutus"}>About us</NavLink>
+          </li>
+        </ul>
+      </div>
       <UseAnimations
         className=" max-sm:block hidden"
         animation={menu4}

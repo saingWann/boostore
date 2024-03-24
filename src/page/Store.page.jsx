@@ -23,19 +23,17 @@ const StorePage = () => {
         </p>
       </div>
 
-      <p
-        className="px-5 pt-5 text-2xl font-bold lg:w-1/2 w-full
-       "
-      >
-        Categories
-      </p>
+      <h1 className="text-center font-serif font-bold lg:text-3xl text-2xl capitalize lg:mt-20 mt-10">
+        Author of the week
+      </h1>
+      <div className="w-[130px] h-2 mx-auto bg-purple-700  my-2"></div>
 
-      <div className="w-full lg:px-10 p-4 gap-4 flex flex-wrap *:">
+      <div className="w-fit mx-auto border-t border-b border-black lg:px-10 py-3 flex justify-center flex-wrap lg:mt-10">
         {categories.map((cat, index) => {
           return (
             <button
               key={index}
-              className="bg-purple-500 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-purple-400 transition duration-300"
+              className="py-2 px-6 text-lg font-semibold hover:bg-purple-800 hover:text-white transition duration-300 border-l border-r"
             >
               {cat}
             </button>

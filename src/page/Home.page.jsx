@@ -13,8 +13,8 @@ const HomePage = () => {
       <HeroComponent />
       <BenifitComponent />
       <NewArrival />
-      <BookOfTheWeekComponent />
       <PromotionCTAComponent />
+      <BookOfTheWeekComponent />
       <CustomerReview />
     </section>
   );

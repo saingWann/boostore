@@ -2,12 +2,12 @@ import React from "react";
 
 const PromotionCTAComponent = () => {
   return (
-    <div className=" bg-cta bg-no-repeat bg-center bg-cover">
+    <div className="bg-no-repeat bg-center bg-cover">
       <div className="py-10 lg:py-32 md:py-20 flex flex-col items-center gap-4 bg-purple-300/20 backdrop-blur-md ">
         <h1 className="uppercase font-bold text-center lg:text-4xl md:text-2xl text-xl">
           Shop wide range of collections
         </h1>
-        <p className="text-center text-white font-bold lg:text-6xl md:text-4xl text-3xl uppercase">
+        <p className="text-center font-bold lg:text-6xl md:text-4xl text-3xl uppercase">
           Book Festival
         </p>
         <div className="flex  my-2">
