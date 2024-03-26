@@ -25,9 +25,9 @@ const RecomentComponent = () => {
   return (
     <>
       <p className="lg:px-0 py-3 lg:mt-20 mt-10 px-4 text-xl font-bold border-t border-b border-black mb-4">
-        Recomended for you
+        Readers also enjoy
       </p>
-      <div className="w-full flex xl:flex-row flex-col lg:gap-4 gap-10">
+      <div className="w-full flex xl:flex-row lg:flex-row md:flex-row flex-col lg:gap-4 gap-10">
         {randomBooks.map((bookData) => (
           <div key={bookData.id} className="xl:w-1/4 w-full">
             <div className="lg:h-[300px] h-fit flex flex-col justify-start gap-3 overflow-hidden shadow-md rounded-lg relative group px-3">

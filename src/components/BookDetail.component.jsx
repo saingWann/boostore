@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import RecomentComponent from "./Recoment.component";
+import { shopLinks } from "../lib/shopLinks";
 
 const BookDetailComponent = ({ selectedBook }) => {
   const [readMore, setReadMore] = useState(false);
   const nav = useNavigate();
+  const [openShopLinks, setOpenShopLinks] = useState(false);
 
   useEffect(() => {
     setReadMore(false);
@@ -20,21 +22,86 @@ const BookDetailComponent = ({ selectedBook }) => {
   };
 
   return (
-    <div className=" w-full lg:p-10 md:p-10 flex justify-center items-center">
-      <div className="flex lg:flex-row flex-col items-start justify-center w-full isolate">
-        <div className={`lg:w-1/3 w-full flex items-start relative`}>
-          <div
-            style={{ backgroundImage: `url(${selectedBook.imgUrl})` }}
-            className="blur-sm lg:h-[600px] h-[300px] w-full  bg-cover bg-blend-multiply bg-gray-800/30"
-          ></div>
+    <div className=" w-full lg:p-10 md:p-10 p-5 flex justify-center items-center ">
+      <div className="flex lg:flex-row  flex-col items-start justify-center w-full ">
+        <div
+          className={`lg:w-1/3 w-full flex items-center flex-col gap-5 lg:sticky md:sticky lg:top-0 z-10`}
+        >
           <img
-            className=" lg:object-contain object-contain absolute inset-0 lg:h-[600px] h-[300px] w-full z-20"
+            className=" lg:object-contain  object-cover w-full lg:h-[600px] md:h-[500px] h-[300px]"
             src={selectedBook.imgUrl}
             alt="bookcover.jpeg"
           />
+          <div className="lg:w-2/3 w-full relative flex ">
+            <ul
+              className={`absolute bg-white p-4  rounded-lg flex flex-col lg:bottom-0 right-1 lg:translate-x-[16rem] lg:translate-y-0 translate-y-[4rem] origin-top-right
+               shadow-lg transition-all duration-300  lg:origin-bottom-left ${
+                 openShopLinks ? "scale-100" : "scale-0"
+               }`}
+            >
+              {shopLinks.map((link) => (
+                <li
+                  key={link}
+                  className="w-full flex justify-between gap-10 hover:bg-gray-100 cursor-pointer p-3 rounded-lg"
+                >
+                  <button className="font-semibold hover:bg-gray-200 active:bg-gray-50">
+                    {link}
+                  </button>
+                  <svg
+                    fill="#000000"
+                    width="25px"
+                    height="25px"
+                    viewBox="-1 0 19 19"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-3.49-3.99a.396.396 0 0 0-.396-.396H9.088a.396.396 0 0 0 0 .791h2.488L9.952 7.612a1.178 1.178 0 0 0-.562-.142H5.146a1.189 1.189 0 0 0-1.188 1.187v4.244a1.189 1.189 0 0 0 1.188 1.187H9.39a1.189 1.189 0 0 0 1.187-1.187V8.657a1.18 1.18 0 0 0-.092-.459l1.65-1.65v2.488a.396.396 0 0 0 .792 0zm-5.302 5.466 2.16-2.161V12.9a.396.396 0 0 1-.395.396H5.146a.396.396 0 0 1-.396-.396V8.657a.396.396 0 0 1 .396-.396h4.157L7.065 10.5a.396.396 0 1 0 .56.56z"></path>
+                    </g>
+                  </svg>
+                </li>
+              ))}
+            </ul>
+
+            <p className="bg-black px-6 rounded-s-full py-3 w-full text-white text-center font-bold">
+              Buy Now {selectedBook.price}$
+            </p>
+            <button
+              onClick={() => setOpenShopLinks(!openShopLinks)}
+              className="bg-black px-6 rounded-e-full py-3 text-white hover:bg-purple-500 active:bg-purple-700 border-s"
+            >
+              <svg
+                width="15px"
+                height="15px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000000"
+                className="group-hover:scale-110 group-hover:translate-x-2 transition-all duration-100"
+              >
+                <g id="SVGRepo_bgCarrier" />
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <g id="SVGRepo_iconCarrier">
+                  {"{"}" "{"}"}
+                  <path
+                    d="m 12 0 c -0.550781 0 -1 0.449219 -1 1 v 6.964844 c -0.007812 -0.253906 -0.113281 -0.496094 -0.292969 -0.671875 l -6 -6 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 5.292969 5.292969 l -5.292969 5.292969 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 l 6 -6 c 0.179688 -0.179687 0.285157 -0.417969 0.292969 -0.667969 v 6.960938 c 0 0.550781 0.449219 1 1 1 s 1 -0.449219 1 -1 v -14 c 0 -0.550781 -0.449219 -1 -1 -1 z m 0 0"
+                    fill="#ffffff"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div className="lg:w-1/2 w-full lg:mx-10  p-5">
-          <div className="border-t border-b py-2 border-black">
+        <div className="lg:w-1/2 w-full sm:mt-10 max-sm:mt-10 lg:mx-10 ">
+          <div className="border-t border-b py-2 border-black lg:mb-10 mb-5">
             <p className="font-bold lg:text-4xl text-2xl">
               {selectedBook.book}
             </p>
@@ -42,37 +109,7 @@ const BookDetailComponent = ({ selectedBook }) => {
               {selectedBook.author}
             </p>
           </div>
-          <span className="my-5 flex gap-10 items-center justify-start">
-            <p className="font-bold text-xl text-purple-600">
-              $ {selectedBook.price}
-            </p>
-            <button className="flex gap-3 items-center bg-purple-600 text-white px-5 py-3 rounded-full hover:bg-purple-500 hover:shadow-md">
-              <svg
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth={0} />
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M14 2C14 1.44772 13.5523 1 13 1C12.4477 1 12 1.44772 12 2V8.58579L9.70711 6.29289C9.31658 5.90237 8.68342 5.90237 8.29289 6.29289C7.90237 6.68342 7.90237 7.31658 8.29289 7.70711L12.2929 11.7071C12.6834 12.0976 13.3166 12.0976 13.7071 11.7071L17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L14 8.58579V2ZM1 3C1 2.44772 1.44772 2 2 2H2.47241C3.82526 2 5.01074 2.90547 5.3667 4.21065L5.78295 5.73688L7.7638 13H18.236L20.2152 5.73709C20.3604 5.20423 20.9101 4.88998 21.4429 5.03518C21.9758 5.18038 22.29 5.73006 22.1448 6.26291L20.1657 13.5258C19.9285 14.3962 19.1381 15 18.236 15H8V16C8 16.5523 8.44772 17 9 17H16.5H18C18.5523 17 19 17.4477 19 18C19 18.212 18.934 18.4086 18.8215 18.5704C18.9366 18.8578 19 19.1715 19 19.5C19 20.8807 17.8807 22 16.5 22C15.1193 22 14 20.8807 14 19.5C14 19.3288 14.0172 19.1616 14.05 19H10.95C10.9828 19.1616 11 19.3288 11 19.5C11 20.8807 9.88071 22 8.5 22C7.11929 22 6 20.8807 6 19.5C6 18.863 6.23824 18.2816 6.63048 17.8402C6.23533 17.3321 6 16.6935 6 16V14.1339L3.85342 6.26312L3.43717 4.73688C3.31852 4.30182 2.92336 4 2.47241 4H2C1.44772 4 1 3.55228 1 3ZM16 19.5C16 19.2239 16.2239 19 16.5 19C16.7761 19 17 19.2239 17 19.5C17 19.7761 16.7761 20 16.5 20C16.2239 20 16 19.7761 16 19.5ZM8 19.5C8 19.2239 8.22386 19 8.5 19C8.77614 19 9 19.2239 9 19.5C9 19.7761 8.77614 20 8.5 20C8.22386 20 8 19.7761 8 19.5Z"
-                    fill="#ffffff"
-                  />
-                </g>
-              </svg>
 
-              <p>Add to cart</p>
-            </button>
-          </span>
           <p
             className={
               readMore
@@ -116,6 +153,58 @@ const BookDetailComponent = ({ selectedBook }) => {
               </g>
             </svg>
           </button>
+          <p className="lg:px-0 py-3 lg:mt-20 mt-10 px-4 text-xl font-bold border-t border-b border-black mb-4">
+            About the author
+          </p>
+          <div>
+            <p className="font-bold text-xl mb-3">{selectedBook.author}</p>
+            {selectedBook.authorBio && <p>{selectedBook.authorBio}</p>}
+          </div>
+          <div className="flex flex-col gap-5 leading-relaxed">
+            <p>
+              Harper Lee, known as Nelle, was born in the Alabama town of
+              Monroeville, the youngest of four children of Amasa Coleman Lee
+              and Frances Cunningham Finch Lee. Her father, a former newspaper
+              editor and proprietor, was a lawyer who served on the state
+              legislature from 1926 to 1938. As a child, Lee was a tomboy and a
+              precocious reader, and enjoyed the friendship of her schoolmate
+              and neighbor, the young Truman Capote.
+            </p>
+            <p>
+              After graduating from high school in Monroeville, Lee enrolled at
+              the all-female Huntingdon College in Montgomery (1944-45), and
+              then pursued a law degree at the University of Alabama (1945-50),
+              pledging the Chi Omega sorority. While there, she wrote for
+              several student publications and spent a year as editor of the
+              campus humor magazine, "Ramma-Jamma". Though she did not complete
+              the law degree, she studied for a summer in Oxford, England,
+              before moving to New York in 1950, where she worked as a
+              reservation clerk with Eastern Air Lines and BOAC.
+            </p>
+            <p>
+              Lee continued as a reservation clerk until the late 50s, when she
+              devoted herself to writing. She lived a frugal life, traveling
+              between her cold-water-only apartment in New York to her family
+              home in Alabama to care for her father.
+            </p>
+            <p>
+              Having written several long stories, Harper Lee located an agent
+              in November 1956. The following month at the East 50th townhouse
+              of her friends Michael Brown and Joy Williams Brown, she received
+              a gift of a year's wages with a note: "You have one year off from
+              your job to write whatever you please. Merry Christmas."
+            </p>
+            <p>
+              Within a year, she had a first draft. Working with J. B.
+              Lippincott & Co. editor Tay Hohoff, she completed To Kill a
+              Mockingbird in the summer of 1959. Published July 11, 1960, the
+              novel was an immediate bestseller and won great critical acclaim,
+              including the Pulitzer Prize for Fiction in 1961. It remains a
+              bestseller with more than 30 million copies in print. In 1999, it
+              was voted "Best Novel of the Century" in a poll by the Library
+              Journal.
+            </p>
+          </div>
           {/*recomend component here  */}
           <RecomentComponent />
         </div>

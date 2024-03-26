@@ -1,0 +1,1 @@
+export const shopLinks = ['Amazon','Audible','Barnes & Noble', 'Walmart eBooks','Libraries']
